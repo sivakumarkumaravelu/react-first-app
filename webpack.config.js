@@ -43,9 +43,9 @@ var config = {
      
     port: 8088,
 
-    // historyApiFallback: {
-    //   index: '/'
-    // }
+    historyApiFallback: {
+      index: '/'
+    }
   }
 
 
