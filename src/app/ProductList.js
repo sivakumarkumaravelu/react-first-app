@@ -23,15 +23,15 @@ export default class ProductList extends Component {
         fetchProducts()
             .then(products => {
                 this.setState({
-                    products: products,
+                    products,
                     loading: false,
                     error: false
                 });
             })
             .catch(error => {
                 this.setState({
-                    error: true
-
+                    error: true,
+                    loading: false
                 })
             })
     }
@@ -49,6 +49,7 @@ export default class ProductList extends Component {
                 <h2>Error while loading products!</h2>
             )
         }
+
         return (
             <ul>
                 {
